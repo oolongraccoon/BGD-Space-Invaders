@@ -11,21 +11,15 @@ public class EnemyBehaviour : MonoBehaviour
 
     // physical simulation hits. For Unity to call this function, at least one of the colliding objects
     // needs to have their RigidBody component set to "Dynamic" for Body Type
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    print("I Collided!");
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        Destroy(gameObject);
-    //        Destroy(collision.gameObject);
-    //        SceneManager.LoadScene(gameOverName);
-    //    }
-    //}
-
-
-    // Unity calls this function if the Collider on the game object has "Is Trigger" checked.
-    // Then it doesn't physically react to hits but still detects them
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("I Collided!");
+     
+ 
+    }
+        // Unity calls this function if the Collider on the game object has "Is Trigger" checked.
+        // Then it doesn't physically react to hits but still detects them
+        private void OnTriggerEnter2D(Collider2D collision)
     {
         print("I was triggered!");
 
@@ -60,5 +54,7 @@ public class EnemyBehaviour : MonoBehaviour
             Destroy(collision.gameObject);
             SceneManager.LoadScene(gameOverName);
         }
+
     }
+
 }
