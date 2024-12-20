@@ -6,8 +6,10 @@ public class EnemyBehaviour : MonoBehaviour
 {
     public AudioClip destructionSFX;
     public int points = 10; // Points awarded for destroying this enemy
+  
+
     // physical simulation hits. For Unity to call this function, at least one of the colliding objects
-	// needs to have their RigidBody component set to "Dynamic" for Body Type
+    // needs to have their RigidBody component set to "Dynamic" for Body Type
     private void OnCollisionEnter2D(Collision2D collision)
     {
         print("I Collided!");
@@ -29,7 +31,15 @@ public class EnemyBehaviour : MonoBehaviour
             // Destroy the projectile game object
             Destroy(collision.gameObject);
             //Find the object and add scores
-            GameObject.FindObjectOfType<UIManager>().AddScore(points);
+            var uiManager = GameObject.FindObjectOfType<UIManager>();
+            if (uiManager == null)
+            {
+                Debug.LogError("UIManager not found in the scene!");
+                return;
+            }
+            uiManager.AddScore(points);
+
+
             // Play an audio clip in the scene and not attached to the alien
             // so the sound keeps playing even after it's destroyed
             AudioSource.PlayClipAtPoint(destructionSFX, transform.position);
