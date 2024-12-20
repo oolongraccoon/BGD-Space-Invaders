@@ -26,4 +26,5 @@ public class ProjectileBehaviour : MonoBehaviour
         Vector3 translationVector = new Vector3(0f, 1f) * moveSpeed * Time.deltaTime;
         transform.Translate(translationVector);
     }
+
 }

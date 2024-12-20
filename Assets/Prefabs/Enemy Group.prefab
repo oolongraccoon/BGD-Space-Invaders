@@ -321,6 +321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: earth (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4125274924806522496, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4317850992472125780, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -445,6 +449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1011047501 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4125274924806522496, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4317850992472125780, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -511,6 +519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: earth
       objectReference: {fileID: 0}
+    - target: {fileID: 4125274924806522496, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4317850992472125780, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -576,6 +588,10 @@ PrefabInstance:
     - target: {fileID: 3058120427136609739, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
       propertyPath: m_Name
       value: earth (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125274924806522496, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4317850992472125780, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
       propertyPath: m_RootOrder
@@ -766,6 +782,10 @@ PrefabInstance:
     - target: {fileID: 3058120427136609739, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
       propertyPath: m_Name
       value: earth (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125274924806522496, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4317850992472125780, guid: f7ace51820ebc4a4d805f929bb04d11d, type: 3}
       propertyPath: m_RootOrder

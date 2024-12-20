@@ -1,22 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBehaviour : MonoBehaviour
 {
     public AudioClip destructionSFX;
     public int points = 10; // Points awarded for destroying this enemy
-  
+    public string gameOverName = "GameOver";
 
     // physical simulation hits. For Unity to call this function, at least one of the colliding objects
     // needs to have their RigidBody component set to "Dynamic" for Body Type
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        print("I Collided!");
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    print("I Collided!");
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        Destroy(gameObject);
+    //        Destroy(collision.gameObject);
+    //        SceneManager.LoadScene(gameOverName);
+    //    }
+    //}
+
 
     // Unity calls this function if the Collider on the game object has "Is Trigger" checked.
-	// Then it doesn't physically react to hits but still detects them
+    // Then it doesn't physically react to hits but still detects them
     private void OnTriggerEnter2D(Collider2D collision)
     {
         print("I was triggered!");
@@ -43,6 +51,14 @@ public class EnemyBehaviour : MonoBehaviour
             // Play an audio clip in the scene and not attached to the alien
             // so the sound keeps playing even after it's destroyed
             AudioSource.PlayClipAtPoint(destructionSFX, transform.position);
+
+        }
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("Triggered by Player!");
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+            SceneManager.LoadScene(gameOverName);
         }
     }
 }
